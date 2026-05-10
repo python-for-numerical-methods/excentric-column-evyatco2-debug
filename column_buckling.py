@@ -1,3 +1,6 @@
+import numpy as np
+from scipy.optimize import bisect
+
 def find_critical_load(L, E, A, r, c, e, sigma_allow):
 
     # P_euler = (pi^2 * E * I) / L^2,  where I = A * r^2
