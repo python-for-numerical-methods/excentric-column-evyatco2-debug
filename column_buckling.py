@@ -14,5 +14,5 @@ def find_critical_load(L, E, A, r, c, e, sigma_allow):
         sigma_max = (P / A) * (1 + (e * c / r ** 2) * secant_val)
         return sigma_max - sigma_allow
 
-    P_critical = bisect(f, 1e-5, 0.999 * P_euler)
+    P_critical = bisect(f, 1e-5, 1 * P_euler)
     return float(P_critical)
