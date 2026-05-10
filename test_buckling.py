@@ -8,5 +8,5 @@ def column_stress_error(P, L, E, A, r, c, e, sigma_allow):
     sigma_max = (P/A) * (1 + (e*c/r**2) * sec_term)
     return sigma_max - sigma_allow 
 def find_critical_load(L, E, A, r, c, e, sigma_allow):
-    P_critical = optimize.newton(lambda P: column_stress_error(P, L, E, A, r, c, e, sigma_allow), 1000)
+    P_critical = optimize.newton(lambda P: column_stress_error(P, L, E, A, r, c, e, sigma_allow),1000)
     return P_critical  
